@@ -1021,3 +1021,100 @@ az vm show \
 You already know the answer is `azureuser`, but this is a good exercise because you're learning how Azure CLI authenticates and accesses your subscription.
 
 
+
+### apache2 and nginx
+Exactly. **Apache2 and Nginx are both web servers**, and they can perform many of the same roles.
+
+Think:
+
+```text
+                 WEB SERVER
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+       Apache2                Nginx
+          │                     │
+          └──────────┬──────────┘
+                     │
+          Receive HTTP/HTTPS
+               requests
+```
+
+### Main similarities
+
+Both can:
+
+* Serve HTML/CSS/JS files
+* Serve images
+* Handle HTTP/HTTPS
+* Use domains such as `example.com`
+* Act as a **reverse proxy**
+* Forward requests to applications
+* Handle TLS/SSL
+* Host multiple websites
+* Listen on ports `80` and `443`
+
+For example:
+
+```text
+Internet
+   │
+   ▼
+Nginx / Apache2
+   │
+   ▼
+FastAPI / Node.js
+```
+
+### The main conceptual difference
+
+Historically:
+
+**Apache2** is known for its modular architecture and `.htaccess` configuration.
+
+**Nginx** is known for its event-driven architecture and is particularly popular as a high-performance reverse proxy, load balancer, and static-file server.
+
+But don't think:
+
+> "Apache is old and Nginx is new."
+
+Both are mature and widely used.
+
+### For your Azure VM
+
+You can choose either:
+
+```text
+Option A
+Internet → Apache2 → FastAPI
+```
+
+or:
+
+```text
+Option B
+Internet → Nginx → FastAPI
+```
+
+You normally **don't need both** for a simple deployment.
+
+Since you're learning Azure, I'd actually recommend understanding **Nginx + reverse proxy** because you'll encounter that architecture frequently when deploying modern applications.
+
+And remember the distinction:
+
+```text
+Apache2 / Nginx
+       ↓
+Web server / reverse proxy
+
+FastAPI / Node.js
+       ↓
+Application server
+
+PostgreSQL / MongoDB
+       ↓
+Database
+```
+
+That's the basic architecture you'll eventually build on your Azure VM.
+
