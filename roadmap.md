@@ -141,7 +141,7 @@ You learn:
 * Subnets
 * CIDR
 * Private networking
-* Routing basics
+* Routing basicssss
 
 Architecture:
 

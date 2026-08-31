@@ -5,7 +5,7 @@ Yes — this error is actually very clear. You have **two different issues** in 
 You ran:
 
 ```bash
-ssh -i ~/Downloads/second_key.pem azureuser@172.209.209.173
+ssh -i ~/Downloads/second_key.pem azureuser@172.209.209.175
 ```
 
 SSH says:

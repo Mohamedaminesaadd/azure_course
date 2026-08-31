@@ -57,7 +57,7 @@ scp -r -i ~/Downloads/first_key.pem ~/Documents/my-project azureuser@4.222.218.8
 You can also copy **Azure VM → your PC**:
 
 ```bash
-scp -i ~/Downloads/first_key.pem azureuser@4.222.218.84:/home/azureuser/test.txt ~/Downloads/
+scp -i ~/Downloads/first_key.pem azureuser@4.222.212.84:/home/azureuser/test.txt ~/Downloads/
 ```
 
 So:
